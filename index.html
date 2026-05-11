@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCNA Consultant & Networking Academy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1>CCNA Professional & Consultant</h1>
+            <div id="datetime"></div>
+        </div>
+    </header>
+
+    <div class="badge-ribbon">
+        <img src="images/CompTia Fundamentals.jpg" alt="CompTIA ITF+">
+        <img src="images/A+.jpg" alt="CompTIA A+">
+        <img src="images/NetworkPlus.jpg" alt="CompTIA Network+">
+        <img src="images/Linux+.jpg" alt="CompTIA Linux+">
+        <img src="images/Evolve Academy.jpg" alt="Evolve Academy">
+    </div>
+
+    <main>
+        <section id="login">
+            <h3 id="login-header">Client Login</h3>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Access Portal</button>
+            </form>
+            
+            <div id="welcome-container" class="hidden">
+                <h2 id="welcome-msg">Hello, <span id="user-display"></span>!</h2>
+                <button id="logoutBtn" class="logout-style">Logout</button>
+            </div>
+
+            <div id="logout-notice" class="hidden">
+                <h2 style="color: #3498db;">You are now logged out...</h2>
+                <p>Thank you for visiting our site.</p>
+                <button onclick="location.reload()" class="login-again">Login Again</button>
+            </div>
+        </section>
+
+        <div id="portal-content" class="hidden">
+            
+            <section class="portal-card">
+                <h3>Academy: Subnetting Mastery</h3>
+                <div class="video-grid">
+                    <div class="vid-item highlight" onclick="playAcademyVideo('https://www.youtube.com/embed/D91C7sOmMPs', 'Class C Subnetting Mastery')">
+                        <div class="play-icon">▶</div>
+                        <span>Class C Subnetting</span>
+                    </div>
+                    <div class="vid-item highlight" onclick="playAcademyVideo('https://www.youtube.com/embed/eKb9lYSEilU', 'VLSM Implementation')">
+                        <div class="play-icon">▶</div>
+                        <span>VLSM Implementation</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portal-card">
+                <h3>Academy: Network Infrastructure</h3>
+                <div class="video-grid">
+                    <div class="vid-item highlight" onclick="playAcademyVideo('https://www.youtube.com/embed/LsJatPQotbo', 'LAN Configuration Tutorial')">
+                        <div class="play-icon">▶</div>
+                        <span>LAN Configuration</span>
+                    </div>
+                    <div class="vid-item highlight" onclick="playAcademyVideo('https://www.youtube.com/embed/BmgI9nYQd5M', 'Enterprise WAN Implementation')">
+                        <div class="play-icon">▶</div>
+                        <span>Enterprise WAN</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portal-card">
+                <h3>Cisco CLI Interface</h3>
+                <div class="terminal">
+                    <p>Router> enable</p>
+                    <p>Router# configure terminal</p>
+                    <p id="blinking-cursor">Router(config)# _</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="videoModal" class="modal hidden">
+        <div class="modal-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
