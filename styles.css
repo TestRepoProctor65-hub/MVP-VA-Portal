@@ -1,69 +1,50 @@
-/* --- Global Theme & Background --- */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background-image: url('images/server-room.jpg'); 
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: #1a1a1d; 
-    color: #e0e6ed;
+/* Ensure hidden elements actually stay hidden */
+.hidden {
+    display: none !important;
 }
 
-header {
-    background: linear-gradient(135deg, #16202a 0%, #2c3e50 100%);
-    color: #fff; padding: 1.5rem 0; text-align: center;
-    border-bottom: 4px solid #3498db; box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+/* Modal Styling */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#datetime { font-size: 0.9rem; color: #bdc3c7; font-family: monospace; }
+.modal-content {
+    background-color: #2c3e50;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    color: white;
+}
 
-/* --- Badges --- */
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Badge Ribbon Layout */
 .badge-ribbon {
-    display: flex; justify-content: center; gap: 25px; padding: 15px;
-    background: rgba(22, 32, 42, 0.85); border-bottom: 2px solid #3498db; flex-wrap: wrap;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+    background: #f4f4f4;
 }
-.badge-ribbon img { height: 65px; transition: transform 0.3s ease; }
-.badge-ribbon img:hover { transform: scale(1.1); }
 
-/* --- Containers --- */
-main { max-width: 900px; margin: 20px auto; padding: 20px; }
-section {
-    background: rgba(30, 42, 54, 0.9); margin-bottom: 30px; padding: 25px;
-    border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);
+.badge-ribbon img {
+    height: 60px;
+    width: auto;
 }
-.portal-card { border-left: 5px solid #3498db; background: rgba(52, 152, 219, 0.05); }
-
-/* --- Forms & Buttons --- */
-.hidden { display: none !important; }
-input, select, textarea {
-    width: 100%; padding: 12px; margin: 10px 0; background: #293a4a;
-    color: #fff; border: 1px solid #34495e; border-radius: 6px; box-sizing: border-box;
-}
-button {
-    background: #3498db; color: white; padding: 12px 24px; border: none;
-    border-radius: 6px; cursor: pointer; font-weight: bold; text-transform: uppercase;
-}
-.logout-style { background: #e74c3c; margin-top: 10px; }
-.login-again { background: #27ae60; margin-top: 15px; }
-
-/* --- Academy Specifics --- */
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px; }
-.vid-item {
-    background: #16202a; padding: 20px; text-align: center; border-radius: 8px;
-    border: 1px solid #34495e; cursor: pointer; transition: 0.3s;
-}
-.vid-item.highlight { border: 2px solid #3498db; background: rgba(52, 152, 219, 0.1); }
-.play-icon { font-size: 1.5rem; color: #3498db; margin-bottom: 5px; }
-
-.terminal { background: #000; color: #00ff00; padding: 15px; font-family: monospace; border-radius: 6px; }
-.result-box { margin-top: 15px; background: #000; padding: 15px; color: #00ff00; font-family: monospace; border: 1px solid #333; }
-
-/* --- Video Modal --- */
-.modal { position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: flex; justify-content: center; align-items: center; }
-.modal-content { background: #16202a; padding: 20px; border-radius: 12px; width: 90%; max-width: 800px; position: relative; border: 1px solid #3498db; }
-.close-btn { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; color: #fff; }
-
-/* --- Skills --- */
-.skills { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.skills li::before { content: "✔ "; color: #27ae60; }
