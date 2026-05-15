@@ -16,16 +16,16 @@
     </header>
 
     <div class="badge-ribbon">
-        <img src="images/CompTia Fundamentals.jpg" alt="CompTIA ITF+">
-        <img src="images/A+.jpg" alt="CompTIA A+">
-        <img src="images/NetworkPlus.jpg" alt="CompTIA Network+">
-        <img src="images/Linux+.jpg" alt="CompTIA Linux+">
-        <img src="images/Evolve Academy.jpg" alt="Evolve Academy">
+        <img src="images/comptia_fundamentals.jpg" alt="CompTIA ITF+">
+        <img src="images/a_plus.jpg" alt="CompTIA A+">
+        <img src="images/network_plus.jpg" alt="CompTIA Network+">
+        <img src="images/linux_plus.jpg" alt="CompTIA Linux+">
+        <img src="images/evolve_academy.jpg" alt="Evolve Academy">
     </div>
 
     <main>
         <section id="login">
-            <h3 id="login-header">Client Login</h3>
+            <h3 id="login-header">Client Access</h3>
             <form id="loginForm">
                 <input type="text" id="username" placeholder="Username" required>
                 <input type="password" id="password" placeholder="Password" required>
@@ -39,13 +39,12 @@
 
             <div id="logout-notice" class="hidden">
                 <h2 style="color: #3498db;">You are now logged out...</h2>
-                <p>Thank you for visiting our site.</p>
+                <p>Thank you for visiting.</p>
                 <button onclick="location.reload()" class="login-again">Login Again</button>
             </div>
         </section>
 
         <div id="portal-content" class="hidden">
-            
             <section class="portal-card">
                 <h3>Academy: Subnetting Mastery</h3>
                 <div class="video-grid">
@@ -86,13 +85,18 @@
 
         <section id="profile">
             <h2>Consultant Profile</h2>
-            <p>Specializing in network design, subnetting, and Cisco infrastructure. Dedicated to helping businesses optimize their routing and switching with a focus on security and efficiency.</p>
+            <p>Specializing in network design, subnetting, and Cisco infrastructure.</p>
         </section>
     </main>
 
     <div id="videoModal" class="modal hidden">
         <div class="modal-content">
+            <span class="close-modal" onclick="closeVideo()">&times;</span>
+            <h3 id="videoTitle"></h3>
+            <div class="video-container">
+                <iframe id="videoPlayer" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
             </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
